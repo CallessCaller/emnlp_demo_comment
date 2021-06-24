@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.transparent,
                     ),
                     Text(
-                      '댓글 작성',
+                      '댓글 작성 (Add comment)',
                       style: TextStyle(
                           fontSize: 30,
                           fontFamily: 'Noto',
@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                           fontSize: 20,
                           fontFamily: 'Noto',
                           fontWeight: FontWeight.w600),
-                      maxLines: 4,
+                      maxLines: 2,
                       controller: controller,
                       decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
@@ -95,7 +95,7 @@ class _HomePageState extends State<HomePage> {
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
                             borderSide: BorderSide(color: Colors.grey)),
-                        hintText: '댓글 입력',
+                        hintText: '댓글 입력 (enter a comment)',
                         hintStyle: TextStyle(
                             color: Colors.black.withOpacity(0.5),
                             fontSize: 20,
@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     Divider(
-                      height: 20,
+                      height: 15,
                       color: Colors.transparent,
                     ),
                     Container(
@@ -149,7 +149,7 @@ class _HomePageState extends State<HomePage> {
                           height: 60,
                           width: 120,
                           child: Text(
-                            '분석 시작',
+                            'Go!',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,

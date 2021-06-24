@@ -104,15 +104,43 @@ class _ModelOutputState extends State<ModelOutput> {
             height: MediaQuery.of(context).size.width * 0.05,
             width: MediaQuery.of(context).size.width * 0.5,
             decoration: BoxDecoration(),
-            child: Text(
-              widget.value_ > 67 ? '이 댓글은 삭제될 위험이 있습니다.' : '악의성이 없는 댓글입니다.',
-              style: TextStyle(
-                  color: Colors.grey[850],
-                  fontFamily: 'Noto',
-                  fontSize: 30,
-                  fontWeight: FontWeight.w400),
+            child: Column(
+              children: [
+                Text(
+                  widget.abusive == '-'
+                      ? '입력 대기중...'
+                      : widget.value_ > 67
+                          ? '이 댓글은 삭제될 위험이 있습니다.'
+                          : widget.value_ > 34
+                              ? '다른 의도로 파악될 수 있는 댓글입니다.'
+                              : '악의성이 없는 댓글입니다.',
+                  style: TextStyle(
+                      color: Colors.grey[850],
+                      fontFamily: 'Noto',
+                      fontSize: 30,
+                      fontWeight: FontWeight.w400),
+                ),
+                Text(
+                  widget.abusive == '-'
+                      ? 'Waiting...'
+                      : widget.value_ > 67
+                          ? 'This comment is at risk of being deleted.'
+                          : widget.value_ > 34
+                              ? 'This comment may have different intentions.'
+                              : 'It is fine.',
+                  style: TextStyle(
+                      color: Colors.grey[850],
+                      fontFamily: 'Noto',
+                      fontSize: 30,
+                      fontWeight: FontWeight.w400),
+                ),
+              ],
             ),
           ),
+        ),
+        Divider(
+          height: 10,
+          color: Colors.transparent,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
