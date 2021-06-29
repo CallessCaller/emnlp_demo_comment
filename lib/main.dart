@@ -117,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                             ? null
                             : () async {
                                 var url =
-                                    'http://163.152.23.120:5000/cls?text=';
+                                    'http://koas.pythonanywhere.com/cls?text=';
                                 url += controller.text.trim();
                                 final response = await http.get(Uri.parse(url));
                                 if (response.statusCode == 200) {
