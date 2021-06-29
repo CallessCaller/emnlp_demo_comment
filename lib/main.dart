@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'KOAF',
+      title: 'KOAS',
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.blueGrey,
         title: Text(
-          'Korea University',
+          'KOAS',
           style: TextStyle(fontWeight: FontWeight.w600, fontFamily: 'Noto'),
         ),
         centerTitle: true,
